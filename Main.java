@@ -22,9 +22,8 @@ public class Main {
         System.out.println();       
         daftarBag.display();
         System.out.println();
-
         
-        daftarAtk.removeData(new ATK("A002", "Pulpen Kenko", "Pulpen", 2));
+        daftarAtk.removeData(0);
         daftarAtk.display();
     }
 }

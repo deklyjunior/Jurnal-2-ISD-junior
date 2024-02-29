@@ -16,8 +16,8 @@ public class Daftar<E> {
     }
     System.out.println();
     }
-    public void removeData(E entry){
-        list.remove(entry);
+    public void removeData(int index){
+        list.remove(index);
     }
     public void setData(E object1, E object2){
         int index = list.indexOf(object1);
