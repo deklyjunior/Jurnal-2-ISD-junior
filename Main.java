@@ -19,11 +19,15 @@ public class Main {
         daftarBag.addData(new Bag("C019", "Tempat Pensil Barbie", "Tempat Pensil", 5));
 
         daftarAtk.display();
-        System.out.println();       
+     
         daftarBag.display();
-        System.out.println();
+
+        System.out.println("Setelah di Hapus Beberapa Data nya \n");
         
         daftarAtk.removeData(0);
         daftarAtk.display();
+
+        daftarBag.removeData(0);
+        daftarBag.display();
     }
 }

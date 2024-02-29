@@ -45,7 +45,7 @@ public class Bag {
     @Override
     public String toString() {
         return "Bag [kodeBarang=" + kodeBarang + ", namaBarang=" + namaBarang + ", jenisBarang=" + jenisBarang
-                + ", stokBarang=" + stokBarang + "]";
+                + ", stokBarang=" + stokBarang + "] \n";
     }
 
     

@@ -45,7 +45,7 @@ public class ATK {
     @Override
     public String toString() {
         return "ATK [kodeBarang=" + kodeBarang + ", namaBarang=" + namaBarang + ", jenisBarang=" + jenisBarang
-                + ", stokBarang=" + stokBarang + "]";
+                + ", stokBarang=" + stokBarang + "] \n";
     }
 
     
