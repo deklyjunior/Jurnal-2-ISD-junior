@@ -1,1 +1,7 @@
-# Jurnal-2-ISD-junior
+## Identitas
+
+Nama: Muhammad Dekly Junior
+
+NIM : 607062300028
+
+Kelas : 47-02
