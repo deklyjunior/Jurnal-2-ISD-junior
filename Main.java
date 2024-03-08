@@ -1,33 +1,47 @@
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        Daftar<ATK> daftarAtk = new Daftar<>(5);
-        Daftar<Bag> daftarBag = new Daftar<>(5);
+        Scanner siu = new Scanner(System.in);
+        SinglyLinkedList linkedList = new SinglyLinkedList();
 
-        daftarAtk.addData(new ATK("A002", "Pulpen Kenko", "Pulpen", 2));
-        daftarAtk.addData(new ATK("A009", "Spidol Snowman", "Spidol", 5));
-        daftarAtk.addData(new ATK("B002", "Buku Sidu", "Buku", 4));
-        daftarAtk.addData(new ATK("B005", "Kertas HVS", "Kertas", 6));
-        daftarAtk.addData(new ATK("B007", "Kertas Karton", "Kertas", 4));
+        while (true) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Tambah Buku");
+            System.out.println("2. Hapus Buku");
+            System.out.println("3. Cetak Daftar Buku");
+            System.out.println("4. Keluar");
 
-        daftarBag.addData(new Bag("C004", "Pensil FaberCastel", "Pensil", 5));
-        daftarBag.addData(new Bag("C006", "Tas Spiderman", "Tas", 2));
-        daftarBag.addData(new Bag("C009", "Monitor LG", "Monitor", 5));
-        daftarBag.addData(new Bag("C013", "Tempat Pensil Superman", "Tempat Pensil", 5));
-        daftarBag.addData(new Bag("C019", "Tempat Pensil Barbie", "Tempat Pensil", 5));
+            System.out.print("Pilihan: ");
+            int pilih = siu.nextInt();
+            siu.nextLine();
 
-        daftarAtk.display();
-     
-        daftarBag.display();
-
-        System.out.println("Setelah di Hapus Beberapa Data nya \n");
-        
-        daftarAtk.removeData(0);
-        daftarAtk.display();
-
-        daftarBag.removeData(0);
-        daftarBag.display();
+            switch (pilih) {
+                case 1:
+                    System.out.print("Masukkan Judul Buku: ");
+                    String judul = siu.nextLine();
+                    System.out.print("Masukkan Penulis Buku: ");
+                    String penulis = siu.next();
+                    System.out.print("Masukkan Tahun Terbit Buku: ");
+                    int tahunTerbit = siu.nextInt();
+                    linkedList.addNodeAtEnd(new ArrayList(judul, penulis, tahunTerbit));
+                    System.out.println("Buku ditambahkan.");
+                    break;
+                case 2:
+                    linkedList.deleteNodeAtEnd();
+                    System.out.println("Buku dihapus.");
+                    break;
+                case 3:
+                    linkedList.printList();
+                    break;
+                case 4:
+                    System.out.println("Program selesai.");
+                    System.exit(0);
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan pilih lagi.");
+                    
+                siu.close();
+            }
+        }
     }
 }
